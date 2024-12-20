@@ -90,6 +90,10 @@ const Main = () => {
         <img src={assets.user_icon} alt="" />
       </div>
       <div className="main_container">
+        {!showResult
+        ?
+         <>
+        
         <div className="greet">
           <p>
             <span>Hello jack</span>
@@ -114,6 +118,27 @@ const Main = () => {
             <img src={assets.code_icon} alt="" />
           </div>
         </div>
+        </>
+        :
+        <div className="result">
+          <div className="result-title">
+            <img src={assets.user_icon} alt="" />
+            <p>{recentPrompt}</p>
+          </div>
+          <div className="result-data">
+            <img src={assets.gemini_icon} alt="" />
+            <p dangerouslySetInnerHTML={{__html: resultData}}>
+             
+              
+            </p>
+          </div>
+
+          {/* 1.18 */}
+
+        </div>
+        
+      }
+    
         <div className="main-bottom">
           <div className="search-box">
             <input
