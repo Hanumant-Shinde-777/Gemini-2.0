@@ -32,9 +32,7 @@ const ContextProvider = (props) => {
 response = await run(prompt);
 setRecentPrompt(prompt);
 
-      // setRecentPrompt(input);
-      // setPrevPrompts((prev) => [...prev, input]);
-      // const response = await run(input);
+    
     }
     else{
       setPrevPrompts((prev) => [...prev, input]);
